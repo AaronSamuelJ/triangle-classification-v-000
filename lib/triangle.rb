@@ -18,17 +18,9 @@ class Triangle
       @a, @b, @c = [@a, @b, @c].sort #=> lower to higher
       raise TriangleError if @a <= 0 or @a + @b <= @c #=> a has to be greater than 0, since c is the largest number, the sum
       #=> of a and b
-      # return :equilateral if @a == @c
-      # return :isosceles if @a == @b or @b == @c
-      # return :scalene
-      case self
-      when self.a == self.c
-        :equilateral
-      when self.a == self.b || self.b == self.c
-        :isosceles
-      when self.a != self.b && self.b != self.c
-        :scalene
-      end
+      return :equilateral if @a == @c
+      return :isosceles if @a == @b or @b == @c
+      return :scalene
     end
   end
 
