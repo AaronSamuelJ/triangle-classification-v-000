@@ -21,12 +21,12 @@ class Triangle
       # return :equilateral if @a == @c
       # return :isosceles if @a == @b or @b == @c
       # return :scalene
-      case self 
-      when self.a == self.c 
+      case self
+      when self.a == self.c
         :equilateral
-      when self.a == self.b or self.b == self.c
+      when self.a == self.b || self.b == self.c
         :isosceles
-      else 
+      else
         :scalene
       end
     end
