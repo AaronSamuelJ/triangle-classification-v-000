@@ -1,18 +1,28 @@
+
+# class Triangle
+#   def initialize(length_1, length_2, length_3)
+#     @length_1 = length_1
+#     @length_2 = length_2
+#     @length_3 = length_3
+#   end
+# end
+
 class Triangle
-  # write code here
-  attr_accessor :a, :b, :c
+  attr_reader :a, :b, :c
   def initialize(a, b, c)
     @a = a
     @b = b
     @c = c
   end
   def kind
-    @a, @b, @c = [@a, @b, @c].sort
-    raise TriangleError if @a <= 0 or @a + @b <= @c
-    return :equilateral if @a == @c
-    return :isosceles if @a == @b or @b == @c
-    return :scalene
+      @a, @b, @c = [@a, @b, @c].sort
+      raise TriangleError if @a <= 0 or @a + @b <= @c
+      return :equilateral if @a == @c
+      return :isosceles if @a == @b or @b == @c
+      return :scalene
+    end
   end
-end
+
 class TriangleError < StandardError
+
 end
