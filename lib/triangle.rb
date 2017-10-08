@@ -26,7 +26,7 @@ class Triangle
         :equilateral
       when self.a == self.b || self.b == self.c
         :isosceles
-      else
+      when self.a != self.b && self.b != self.c
         :scalene
       end
     end
